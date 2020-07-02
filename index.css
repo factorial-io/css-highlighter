@@ -1,0 +1,108 @@
+/* each html document should have a lang attribute */
+html:not([lang]),
+
+/* svgs should have a focusable="false" to avoid focus in IE11 */
+svg:not([focusable="false"]),
+
+/* all images should have an alt tag */
+img:not([alt]),
+/* if an image has an empty alt tag, it should also have aria-hidden="true" */
+img[alt=""]:not([aria-hidden="true"]),
+
+/* only images and iframes should have width and height attributes */
+*:not(img):not(iframe)[width],
+*:not(img):not(iframe)[height],
+
+/* anchors should have an href attribute */
+a:not([href]),
+/* anchors should not have an empty href */
+a[href=""],
+/* href attributes should not end with # */
+a[href$="#"],
+/* anchors should not be used as buttons */
+a[href="#"],
+a[href^="javascript:"],
+/* anchors with target=_blank should have rel="noopener" */
+a[target="_blank"]:not([rel="noopener"]),
+
+/* inputs need a type */
+input:not([type]),
+/* empty buttons should be properly labelled */
+button:empty:not([aria-label]):not([aria-labelledby]),
+/* the first direct child of a fieldset should be legend */
+fieldset > *:first-child:not(legend),
+
+/* lists only allow li as direct children */
+ul > *:not(li),
+ol > *:not(li),
+/* direct children of a dl must be div, dt or dd */
+dl > *:not(div):not(dt):not(dd),
+/* if direct children of a dl is a div, its direct children must be dt or dd */
+dl > div > *:not(dt):not(dd),
+/* if direct children of a dl is a div, all direct children must be a div */
+dl > div ~ *:not(div),
+/* some elements should not be direct children of specific elements */
+section > section:first-child,
+article > section:first-child,
+article > article:first-child,
+section > article:first-child,
+section > aside:first-child,
+aside > aside:first-child,
+article > aside:first-child,
+aside > article:first-child,
+aside > section:first-child,
+/* links and buttons should not have specific elements as children */
+:is(a, button) :is(a, button, input, textarea, select),
+/* a select should only have option or optgroup children */
+select *:not(option):not(optgroup),
+/* headlines should not have specific elements as children */
+:is(h1, h2, h3, h4, h5, h6) :is(code, input, map, object, output, script, select, textarea, address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video),
+/* a block element should not be inside an inline element */
+:is(a, abbr, acronym, b, bdo, big, br, button, cite, code, dfn, em, i, img, input, kbd, label, map, object, output, q, samp, script, select, small, span, strong, sub, sup, textarea, time, tt, var) :is(address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video),
+
+/* role attributes are not necessary for elements with a specific meaning */
+article[role="article"],
+button[role="button"],
+input[type="checkbox"][role="checkbox"],
+input[type="radio"][role="radio"],
+input[type="range"][role="range"],
+input[role="input"],
+form[role="form"],
+img[role="img"],
+link[role="link"],
+main[role="main"],
+nav[role="menu"],
+nav[role="navigation"],
+section[role="section"],
+tr[role="row"],
+
+/* tabindex should only be set to 0 or -1 */
+[tabindex]:not([tabindex="0"]):not([tabindex="-1"]),
+
+/* non-focusable elements should not have onclick or onfocus listeners */
+*:not(input):not(button):not(textarea):not(select)[onclick],
+*:not(input):not(button):not(textarea):not(select)[onfocus],
+
+/* classes and ids should not start with a number */
+*[class^="0"],
+*[class^="1"],
+*[class^="2"],
+*[class^="3"],
+*[class^="4"],
+*[class^="5"],
+*[class^="6"],
+*[class^="7"],
+*[class^="8"],
+*[class^="9"],
+*[id^="0"],
+*[id^="1"],
+*[id^="2"],
+*[id^="3"],
+*[id^="4"],
+*[id^="5"],
+*[id^="6"],
+*[id^="7"],
+*[id^="8"],
+*[id^="9"] {
+  outline: 3px solid red !important;
+}
