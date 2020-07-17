@@ -23,7 +23,7 @@ a[href$="#"],
 a[href="#"],
 a[href^="javascript:"],
 /* anchors with target=_blank should have rel="noopener" */
-a[target="_blank"]:not([rel="noopener"]),
+a[target="_blank"]:not([rel~="noopener"]),
 
 /* inputs need a type */
 input:not([type]),
