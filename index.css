@@ -58,7 +58,7 @@ select *:not(option):not(optgroup),
 /* headlines should not have specific elements as children */
 :is(h1, h2, h3, h4, h5, h6) :is(code, input, map, object, output, script, select, textarea, address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video),
 /* a block element should not be inside an inline element */
-:is(a, abbr, acronym, b, bdo, big, br, button, cite, code, dfn, em, i, img, input, kbd, label, map, object, output, q, samp, script, select, small, span, strong, sub, sup, textarea, time, tt, var) :is(address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video),
+:is(abbr, acronym, b, bdo, big, br, button, cite, code, dfn, em, i, img, input, kbd, label, map, object, output, q, samp, script, select, small, span, strong, sub, sup, textarea, time, tt, var) :is(address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video),
 
 /* role attributes are not necessary for elements with a specific meaning */
 article[role="article"],
@@ -101,4 +101,9 @@ tr[role="row"],
 *[id^="8"],
 *[id^="9"] {
   outline: 3px solid red !important;
+}
+
+/* links containing block level elements is not best practice due to accessibility */
+:is(a) :is(address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video) {
+  outline: 3px solid yellow !important;
 }
