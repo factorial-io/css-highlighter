@@ -79,10 +79,6 @@ tr[role="row"],
 /* tabindex should only be set to 0 or -1 */
 [tabindex]:not([tabindex="0"]):not([tabindex="-1"]),
 
-/* non-focusable elements should not have onclick or onfocus listeners */
-*:not(input):not(button):not(textarea):not(select)[onclick],
-*:not(input):not(button):not(textarea):not(select)[onfocus],
-
 /* classes and ids should not start with a number */
 *[class^="0"],
 *[class^="1"],
