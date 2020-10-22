@@ -9,9 +9,9 @@ img:not([alt]),
 /* if an image has an empty alt tag, it should also have aria-hidden="true" */
 img[alt=""]:not([aria-hidden="true"]),
 
-/* only images and iframes should have width and height attributes */
-*:not(img):not(iframe)[width],
-*:not(img):not(iframe)[height],
+/* only images, iframes and svgs should have width and height attributes */
+*:not(img):not(iframe):not(svg)[width],
+*:not(img):not(iframe):not(svg)[height],
 
 /* anchors should have an href attribute */
 a:not([href]),
