@@ -59,6 +59,8 @@ select *:not(option):not(optgroup),
 :is(h1, h2, h3, h4, h5, h6) :is(code, input, map, object, output, script, select, textarea, address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video),
 /* a block element should not be inside an inline element */
 :is(abbr, acronym, b, bdo, big, br, button, cite, code, dfn, em, i, img, input, kbd, label, map, object, output, q, samp, script, select, small, span, strong, sub, sup, textarea, time, tt, var) :is(address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video),
+/* a list should not be inside a paragraph */
+p ul, p ol,
 
 /* role attributes are not necessary for elements with a specific meaning */
 article[role="article"],
@@ -104,6 +106,7 @@ tr[role="row"],
 }
 
 /* links containing block level elements is not best practice due to accessibility */
-:is(a) :is(address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video) {
+:is(a)
+  :is(address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video) {
   outline: 3px solid yellow !important;
 }
