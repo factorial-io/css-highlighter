@@ -114,7 +114,10 @@ iframe[tabindex="-1"],
 *[id^="9"],
 
 /* iframes need to have a title */
-iframe:not([title]) {
+iframe:not([title]),
+
+/* videos which are not muted should not have the autoplay attribute */
+video:not([muted])[autoplay] {
   outline: 3px solid red !important;
 }
 
