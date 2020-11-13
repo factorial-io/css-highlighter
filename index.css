@@ -101,7 +101,10 @@ tr[role="row"],
 *[id^="6"],
 *[id^="7"],
 *[id^="8"],
-*[id^="9"] {
+*[id^="9"],
+
+/* iframes need to have a title */
+iframe:not([title]) {
   outline: 3px solid red !important;
 }
 
