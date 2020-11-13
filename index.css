@@ -1,5 +1,6 @@
-/* each html document should have a lang attribute */
+/* each html document should have a lang attribute with a non-empty value */
 html:not([lang]),
+html[lang=""],
 
 /* svgs should have a focusable="false" to avoid focus in IE11 */
 svg:not([focusable="false"]),
