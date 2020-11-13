@@ -117,7 +117,15 @@ iframe[tabindex="-1"],
 iframe:not([title]),
 
 /* videos which are not muted should not have the autoplay attribute */
-video:not([muted])[autoplay] {
+video:not([muted])[autoplay],
+
+/* headlines should not be empty */
+h1:empty,
+h2:empty,
+h3:empty,
+h4:empty,
+h5:empty,
+h6:empty {
   outline: 3px solid red !important;
 }
 
