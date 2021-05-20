@@ -82,15 +82,6 @@ tr[role="row"],
 /* tabindex should only be set to 0 or -1 */
 [tabindex]:not([tabindex="0"]):not([tabindex="-1"]),
 
-/* tabindex should not be set to -1 for certain elements */
-a[href][tabindex="-1"],
-area[href][tabindex="-1"],
-input:not([disabled]):not([readonly])[tabindex="-1"],
-select:not([disabled]):not([readonly])[tabindex="-1"],
-textarea:not([disabled]):not([readonly])[tabindex="-1"],
-button:not([disabled]):not([readonly])[tabindex="-1"],
-iframe[tabindex="-1"],
-
 /* classes and ids should not start with a number */
 *[class^="0"],
 *[class^="1"],
