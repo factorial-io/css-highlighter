@@ -122,6 +122,17 @@ h6:empty {
 
 /* links containing block level elements is not best practice due to accessibility */
 :is(a)
-  :is(address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video) {
+  :is(address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video),
+
+/* elements that are marked as active using a class but not aria-current or aria-selected */
+.is-active:not([aria-current]):not([aria-selected]),
+.active:not([aria-current]):not([aria-selected]),
+.is-current:not([aria-current]):not([aria-selected]),
+.current:not([aria-current]):not([aria-selected]),
+.is-selected:not([aria-current]):not([aria-selected]),
+.selected:not([aria-current]):not([aria-selected]),
+[class$="--active"]:not([aria-current]):not([aria-selected]),
+[class$="--selected"]:not([aria-current]):not([aria-selected]),
+[class$="--current"]:not([aria-current]):not([aria-selected]) {
   outline: 3px solid yellow !important;
 }
