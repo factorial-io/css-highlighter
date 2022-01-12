@@ -2,9 +2,6 @@
 html:not([lang]),
 html[lang=""],
 
-/* svgs should have a focusable="false" to avoid focus in IE11 */
-svg:not([focusable="false"]),
-
 /* all images should have an alt tag */
 img:not([alt]),
 /* if an image has an empty alt tag, it should also have aria-hidden="true" */
@@ -123,6 +120,9 @@ h6:empty {
 /* links containing block level elements is not best practice due to accessibility */
 :is(a)
   :is(address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video),
+
+/* svgs should have a focusable="false" to avoid focus in IE11 (only a warning since we usually do not support IE11 anymore) */
+svg:not([focusable="false"]),
 
 /* elements that are marked as active using a class but not aria-current or aria-selected */
 .is-active:not([aria-current]):not([aria-selected]),
