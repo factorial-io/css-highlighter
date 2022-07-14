@@ -113,7 +113,10 @@ h2:empty,
 h3:empty,
 h4:empty,
 h5:empty,
-h6:empty {
+h6:empty,
+
+/* labels need to be connected with an input using `for` */
+label:not(:has(input, textarea, select)):is(:not([for]), [for=""]) {
   outline: 3px solid red !important;
 }
 
