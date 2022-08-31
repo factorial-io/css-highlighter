@@ -79,7 +79,7 @@ tr[role="row"],
 /* tabindex should only be set to 0 or -1 */
 [tabindex]:not([tabindex="0"]):not([tabindex="-1"]),
 
-/* classes and ids should not start with a number */
+/* classes should not start with a number */
 *[class^="0"],
 *[class^="1"],
 *[class^="2"],
@@ -90,16 +90,6 @@ tr[role="row"],
 *[class^="7"],
 *[class^="8"],
 *[class^="9"],
-*[id^="0"],
-*[id^="1"],
-*[id^="2"],
-*[id^="3"],
-*[id^="4"],
-*[id^="5"],
-*[id^="6"],
-*[id^="7"],
-*[id^="8"],
-*[id^="9"],
 
 /* iframes need to have a title */
 iframe:not([title]),
