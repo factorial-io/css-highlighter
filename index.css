@@ -8,8 +8,8 @@ img:not([alt]),
 img[alt=""]:not([aria-hidden="true"]),
 
 /* only images, iframes, svgs, videos and rect should have width and height attributes */
-*:not(img):not(iframe):not(svg):not(video):not(rect)[width],
-*:not(img):not(iframe):not(svg):not(video):not(rect)[height],
+*:not(img):not(iframe):not(svg):not(video):not(rect):not(source)[width],
+*:not(img):not(iframe):not(svg):not(video):not(rect):not(source)[height],
 
 /* anchors should have an href attribute */
 a:not([href]),
