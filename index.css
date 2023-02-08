@@ -7,9 +7,9 @@ img:not([alt]),
 /* if an image has an empty alt tag, it should also have aria-hidden="true" */
 img[alt=""]:not([aria-hidden="true"]),
 
-/* only images, iframes, svgs, videos and rect should have width and height attributes */
-*:not(img):not(iframe):not(svg):not(video):not(rect):not(source)[width],
-*:not(img):not(iframe):not(svg):not(video):not(rect):not(source)[height],
+/* only images, iframes, svgs, videos, rect and canvas should have width and height attributes */
+*:not(img):not(iframe):not(svg):not(video):not(rect):not(source):not(canvas)[width],
+*:not(img):not(iframe):not(svg):not(video):not(rect):not(source):not(canvas)[height],
 
 /* anchors should have an href attribute */
 a:not([href]),
