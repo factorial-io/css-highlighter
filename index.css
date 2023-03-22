@@ -7,6 +7,11 @@ img:not([alt]),
 /* if an image has an empty alt tag, it should also have aria-hidden="true" */
 img[alt=""]:not([aria-hidden="true"]),
 
+/* all images should be served as avif or webp */
+img:is(:not(picture img)):is([src$=".jpg"], [src$=".png"]),
+picture img:only-child:is([src$=".jpg"], [src$=".png"]),
+source:not([type="image/webp"], [type="image/avif"]) ~ img:is([src$=".jpg"], [src$=".png"]),
+
 /* only images, iframes, svgs, videos, rect and canvas should have width and height attributes */
 *:not(img):not(iframe):not(svg):not(video):not(rect):not(source):not(canvas)[width],
 *:not(img):not(iframe):not(svg):not(video):not(rect):not(source):not(canvas)[height],
